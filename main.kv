@@ -1,0 +1,551 @@
+<CircularProgressBar>:
+    height: 150
+    width: 150
+    max: 100
+
+<CircularProgressBar2>:
+    height: 150
+    width: 150
+    max: 100
+
+<Main>:
+    label11: label11_id
+    label12: label12_id
+    label13: label13_id
+    label14: label14_id
+    label15: label15_id
+    label16: label16_id
+    label17: label17_id
+    label18: label18_id
+    label5: label5_id
+    label6: label6_id
+    label19: label19_id
+    label20: label20_id
+    label21: label21_id
+    label22: label22_id
+    label23: label23_id
+
+
+    MDBottomNavigation:
+        #panel_color: "#eeeaea"
+        selected_color_background: "orange"
+        text_color_active: "lightgrey"
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Home'
+            icon: 'home'
+
+            MDLabel:
+                text: "Good Morning\nHero"
+                bold: True
+                font_size: "24sp"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1  # White color in RGBA format
+                pos_hint: {"center_y": .87}
+                x: "36dp"
+                line_height: .7
+
+            MDTextField:
+                mode: 'round'
+                icon_left: "magnify"
+                width: "300dp"  # Adjust the width as needed
+                hint_text: "Search"
+                size_hint: None, None
+                height: "42dp"
+                pos_hint: {"center_x": .5, "center_y": .75}  # Adjust the vertical position
+                normal_color: 1, 1, 1, 1
+
+            MDGridLayout:
+                id: cards_box
+                cols: 2
+                rows: 1
+                spacing: "10dp"
+                padding: "25dp"
+                size_hint_y: None
+                height: root.height / 1.6  # Adjust the divisor to decrease or increase the height of the cards
+
+                MDCard:
+                    size_hint_y: None
+                    height: "200dp"  # Adjust the height of the card
+
+                    BoxLayout:
+                        orientation: 'vertical'
+
+                        AsyncImage:
+                            source: "C:/Users/imran/PycharmProjects/pythonProject7/assets/icons/monitoring.png"
+                            size_hint_y: None
+                            height: "120dp"  # Adjust the height of the image
+                            allow_stretch: True
+
+                        MDLabel:
+                            text: "Remote Controlled"
+                            theme_text_color: "Secondary"
+                            halign: 'center'
+                            bold: True  # Make the text bold
+
+                MDCard:
+                    size_hint_y: None
+                    height: "200dp"  # Adjust the height of the card
+
+                    BoxLayout:
+                        orientation: 'vertical'
+
+                        AsyncImage:
+                            source: "C:/Users/imran/PycharmProjects/pythonProject7/assets/icons/remote.png"
+                            size_hint_y: None
+                            height: "120dp"  # Adjust the height of the image
+                            allow_stretch: True
+
+                        MDLabel:
+                            text: "Remote Controlled"
+                            theme_text_color: "Secondary"
+                            halign: 'center'
+                            bold: True  # Make the text bold
+
+            BoxLayout:
+                orientation: 'vertical'
+                height: "-100dp"
+                pos_hint: {'center_x': 0.29, 'center_y': 0.07}
+
+                MDLabel:
+                    text: "Water Level"
+                    theme_text_color: "Secondary"
+                    halign: "center"
+                    bold: True
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+                CircularProgressBar:
+                    id: circular_progress_bar_container
+                    canvas:
+                        Clear
+                        Color:
+                            rgba: 0, 0, 1, 1
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+
+            BoxLayout:
+                orientation: 'vertical'
+                height: "-100dp"
+                pos_hint: {'center_x': 0.72, 'center_y': 0.07}
+
+                MDLabel:
+                    text: "Feed Level"
+                    theme_text_color: "Secondary"
+                    halign: "center"
+                    bold: True
+
+                CircularProgressBar2:
+                    id: circular_progress_bar_container2
+                    canvas:
+                        Clear
+                        Color:
+                            rgba: 0, 0, 1, 1
+                    pos_hint: {'center_x': 0.6, 'center_y': 0.6}
+
+
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Feeder'
+            icon: 'food'
+
+            MDLabel:
+                padding: 60
+                text: "Poultry Feedeer Monitoring System"
+                theme_text_color: "Secondary"
+                size_hint_x: None
+                width: "1000dp"
+                pos_hint: {"x": 0, "center_y": .93}  # Left side is fixed
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .8}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label19_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"x": 1, "center_y": .8}  # Right side is fixed (x: 1)
+                    padding: "20dp"
+                    elevation: 3
+
+                    MDLabel:
+                        id: label20_id
+                        text: "Another Card"
+                        theme_text_color: "Secondary"
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .6}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label21_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"x": 1, "center_y": .6}  # Right side is fixed (x: 1)
+                    padding: "20dp"
+                    elevation: 3
+
+                    MDLabel:
+                        id: label22_id
+                        text: "Another Card"
+                        theme_text_color: "Secondary"
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .4}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label23_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Drinker'
+            icon: 'water'
+
+            MDLabel:
+                padding: 60
+                text: "Poultry Drinker Monitoring System"
+                theme_text_color: "Secondary"
+                size_hint_x: None
+                width: "1000dp"
+                pos_hint: {"x": 0, "center_y": .93}  # Left side is fixed
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .8}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label11_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"x": 1, "center_y": .8}  # Right side is fixed (x: 1)
+                    padding: "20dp"
+                    elevation: 3
+
+                    MDLabel:
+                        id: label12_id
+                        text: "Another Card"
+                        theme_text_color: "Secondary"
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .6}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label13_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"x": 1, "center_y": .6}  # Right side is fixed (x: 1)
+                    padding: "20dp"
+                    elevation: 3
+
+                    MDLabel:
+                        id: label14_id
+                        text: "Another Card"
+                        theme_text_color: "Secondary"
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .4}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label15_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"x": 1, "center_y": .4}  # Right side is fixed (x: 1)
+                    padding: "20dp"
+                    elevation: 3
+
+                    MDLabel:
+                        id: label16_id
+                        text: "Another Card"
+                        theme_text_color: "Secondary"
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"center_x": 0.5, "center_y": .2}  # Left side is fixed (x: 0)
+                    elevation: 3
+                    padding: "20dp"
+
+                    MDLabel:
+                        id: label17_id
+                        text: "Main Screen"
+                        theme_text_color: "Secondary"
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"
+                    pos_hint: {"x": 1, "center_y": .2}  # Right side is fixed (x: 1)
+                    padding: "20dp"
+                    elevation: 3
+
+                    MDLabel:
+                        id: label18_id
+                        text: "Another Card"
+                        theme_text_color: "Secondary"
+
+        MDBottomNavigationItem:
+            name: 'screen 4'
+            text: 'Remote'
+            icon: 'remote'
+
+            MDLabel:
+                padding: 100
+                text: "Poultry Drinker Remote"
+                theme_text_color: "Secondary"
+                size_hint_x: None
+                width: "1000dp"
+                pos_hint: {"x": 0, "center_y": .93}  # Left side is fixed
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"  # Increased the height to accommodate the button
+                    pos_hint: {"x": 0, "center_y": .8}  # Left side is fixed
+                    elevation: 3
+                    padding: "20dp"
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing: 20
+
+                        MDRaisedButton:
+                            text: "Connect"
+                            id: connect_button  # Make sure you have the correct ID here
+                            size_hint_x: 0.3  # Adjust the width of the button
+                            size_hint_y: None  # Set a fixed height for the button
+                            height: "50dp"  # Adjust the height of the button
+                            pos_hint: {"center_y": .5}  # Adjust the vertical alignment
+                            on_release: root.connect_to_raspberry_pi()
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"  # Increased the height to accommodate the button
+                    pos_hint: {"x": 1, "center_y": .8}  # Left side is fixed
+                    elevation: 3
+                    padding: "20dp"
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing: 20
+
+                        MDRaisedButton:
+                            text: "Disconnect"
+                            size_hint_x: 0.3  # Adjust the width of the button
+                            size_hint_y: None  # Set a fixed height for the button
+                            height: "50dp"  # Adjust the height of the button
+                            pos_hint: {"center_y": .5}  # Adjust the vertical alignment
+                            on_release: root.disconnect_to_raspberry_pi()
+
+            MDLabel:
+                padding: 60
+                id: connection_status_label
+                text: "Connection Status: Not connected"
+                theme_text_color: "Secondary"
+                size_hint_x: None
+                width: "450dp"
+                pos_hint: {"x": 0, "center_y": .65}  # Left side is fixed
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"  # Increased the height to accommodate the button
+                    pos_hint: {"x": 0, "center_y": .55}  # Left side is fixed
+                    elevation: 3
+                    padding: "20dp"
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing: 20
+
+                        MDRaisedButton:
+                            text: "Turn On"
+                            size_hint_x: 0.3  # Adjust the width of the button
+                            size_hint_y: None  # Set a fixed height for the button
+                            height: "50dp"  # Adjust the height of the button
+                            pos_hint: {"center_y": .5}  # Adjust the vertical alignment
+                            on_release: root.on_water_pump()
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"  # Increased the height to accommodate the button
+                    pos_hint: {"x": 1, "center_y": .55}  # Left side is fixed
+                    elevation: 3
+                    padding: "20dp"
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing: 20
+
+                        MDRaisedButton:
+                            text: "Turn Off"
+                            size_hint_x: 0.3  # Adjust the width of the button
+                            size_hint_y: None  # Set a fixed height for the button
+                            height: "50dp"  # Adjust the height of the button
+                            pos_hint: {"center_y": .5}  # Adjust the vertical alignment
+                            on_release: root.off_water_pump()
+            MDLabel:
+                padding: 90
+                text: "Water Pump"
+                id: label5_id
+                theme_text_color: "Secondary"
+                size_hint_x: None
+                width: "450dp"
+                pos_hint: {"x": 0, "center_y": .43}  # Left side is fixed
+
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 20  # Adjust the spacing between cards
+                padding: 30
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"  # Increased the height to accommodate the button
+                    pos_hint: {"x": 0, "center_y": .28}  # Left side is fixed
+                    elevation: 3
+                    padding: "20dp"
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing: 20
+
+                        MDRaisedButton:
+                            text: "Turn On"
+                            size_hint_x: 0.3  # Adjust the width of the button
+                            size_hint_y: None  # Set a fixed height for the button
+                            height: "50dp"  # Adjust the height of the button
+                            pos_hint: {"center_y": .5}  # Adjust the vertical alignment
+                            on_release: root.on_dc_motor()
+
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: None, None
+                    size: "140dp", "110dp"  # Increased the height to accommodate the button
+                    pos_hint: {"x": 1, "center_y": .28}  # Left side is fixed
+                    elevation: 3
+                    padding: "20dp"
+
+                    BoxLayout:
+                        orientation: 'horizontal'
+                        spacing: 20
+
+                        MDRaisedButton:
+                            text: "Turn Off"
+                            size_hint_x: 0.3  # Adjust the width of the button
+                            size_hint_y: None  # Set a fixed height for the button
+                            height: "50dp"  # Adjust the height of the button
+                            pos_hint: {"center_y": .5}  # Adjust the vertical alignment
+                            on_release: root.off_dc_motor()
+            MDLabel:
+                padding: 90
+                text: "DC Motor Status"
+                id: label6_id
+                theme_text_color: "Secondary"
+                size_hint_x: None
+                width: "450dp"
+                pos_hint: {"x": -0.13, "center_y": .18}  # Left side is fixed
+
+
+
